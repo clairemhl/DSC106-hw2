@@ -1,0 +1,123 @@
+<head> 
+    <title>Mcdonald reports</title>
+    <style>
+        .item_graph{
+            float: left;
+            width: 33.33%
+        }
+        .agg_chart{
+            float: left;
+            width: 50%
+        }
+        .daily_sales{
+            float:left;
+            width: 50%
+        }
+        h2{
+            color: orange;
+        }
+        p{
+            border: dotted orange;
+        }
+        /* #container_oa{
+            float:left;
+            width: 90%;
+            height: 400px
+        }
+        .h2{
+            float:left;
+            clear:right
+        } */
+    </style>
+
+</head>
+<body>
+    <h1 style = "border-left: 6px solid orangered ;color: Darkorange;">Mcdonald Reports</h1>
+    <h2> Overall Trends</h2>
+    <p> Mcdonald's old fashioned way under the impact of Impossible Burger</p>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+     <p>The overall sales data from 2016 to present. It contains the sales data for Hamburger, Chicken Fillet and Fish Fillet in each region</p>
+     <div id = "container_oa"></div>
+     <script src="highchart_overall.js"></script>
+    <p>From the chart, the sales for all three products steadily increase overtime.
+        Among them, the hamburger has the highest sales, almost twice much as the chicken fillet sales.
+        Fish fillet has the lowest sales, but it is the most steadiest. On the October 2018, we can see a significant drop
+        in all three sales. We will investigate more into the impact of Impossible Burger in the following reports.  </p>
+
+    <h2>Line charts for sales of each product</h2> 
+    <p>By separating each product, we can see the fluctuation more easily for each product.</p>
+    <div id = "container_hb", class = 'item_graph'></div>
+    <script src="highchart_hamburger.js"></script>
+
+    <div id = "container_cf", class = 'item_graph'></div>
+    <script src="highchart_chickenfillet.js"></script>
+
+    <div id = "container_ff", class = 'item_graph'></div>
+    <script src="highchart_fishfillet.js"></script>
+
+    <p>For each product, taking the average to simplify the line we get the left chart. 
+        Then we transform the sales data to the growth rate for each month, we get the right chart.
+        From the left chart we can see that the hamburger's sale fluctuate the most, but also the highest. 
+        At october 2018, all three products have a significant big drop. From the left chart, we can see this drop is
+        the largest drop over this two years period, indicating the impact of the impossible burger. Also, from the growth rate
+        chart, there is a periodical rise and fall in the overall sales. All three products have growth rate larger than 0 or smaller 
+        than 0 at the same time. Every two or three months, the growth rate would peak periodically. On September 2018, the sales decreased 
+        compare to the August, and on October 2018 it decreases even more because of the market competition between Impossible Burger.
+        However, it seems the sales is on the decreasing track based on the periodicity, so the impossible burger's impact 
+        can be exaggerated by overlapping with the decreasing part of the period. The sales for November bounces back
+        reflecting the return of customers to Mcdonald. However, it is important to note that comparing to the previous 
+        increasing trend in sales, the months after the release of impossible burger lose the increasing tendency. 
+        It means the impossible burger do has a long-term and vital impact on the Mcdonald's sales.The months after October 2018 
+        only has sales data fluctuate around 4,750,000, and haven't come across a significant rise. It is recomended for Mcdonald to come up with 
+        new appealing product to fight back the Impossible burger.
+    </p>
+    <div id = "container_avg", class = 'agg_chart'></div>
+    <script src="highchart_avg.js"></script>
+
+    <div id = "diff", class = 'agg_chart'></div>
+    <script src="highchart_diff.js"></script>
+
+    <h2>Line charts for sales in each region</h2>
+    <p>The sales data for each region did not vary much, except for Central region, whose sales are almost twice
+        high as the other region. If we transform the data to the growth rate, the lines for each region are highly
+        overlapping, and also has a pattern of periodic. It means different regions share the same periodicity. Customers in
+        different region over the whole country tend to be attracted to Mcdonald in the same month.
+    </p>
+
+    <div id = "nw", class = 'agg_chart'></div>
+    <script src="highchart_nw.js"></script>
+
+    <div id = "gr", class = 'agg_chart'></div>
+    <script src="highchart_regiongr.js"></script>
+
+    <h2>Daily sales data analysis for 2016 January</h2>
+    <div id = "daily_sales", style = 'width: 100%; height: 400px;'></div>
+    <script src="highchart_daily.js"></script>
+    <p>From the chart of daily sales, it is hard to see some overlapping lines from different region in different products. We can tell that
+        hamburger is the top seller, generating almost twice the revenue. But the ups and down does not show a explicit pattern.
+    </p>
+    <div id = "ds_product", class = 'daily_sales'></div>
+    <script src="daily_sales_product.js"></script>
+    <div id = "ds_hm", class = 'daily_sales'></div>
+    <script src="dailysales-hm.js"></script>
+    <div id = "ds_cf", class = 'daily_sales'></div>
+    <script src="daily_sales_cf.js"></script>
+    <div id = "ds_ff", class = 'daily_sales'></div>
+    <script src="daily_sales_ff.js"></script>
+    <p> From the separated sales data for each product, it can be seen that the daily sales fluctuate drastically, and have peak and vally every other day. 
+        The fish fillet has a overlapping trend in different region, and the periodicity is pretty obvious in weekly basis. However for 
+        hamburgers and chicken fillet, the periodicity cannot be easily spotted. It means the sales for hamburger and chicken fillet does not influenced much 
+        by weekday or weekend, but fish fillet is greatly influenced by the day. In respect to the region, Northwest usually have the highest sales,
+        indicating the loyalty and passion of customers.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>From all above, Mcdonald need urgent action to keep its increasing sales interrupted by Impossible burger. Probably come up with 
+        some products as similarly healthy. From our analysis of month sales, we can spot the periodicity in all three products and the overlapping of 
+        peaks and valleys in different region. In daily sales data, however, the periodicity can only be observed in fishfillet, meaning hamburgers 
+        and chicken fillet are resistant to the weekend and weekday cycle. The regions differ a lot in daily sales, but Northwest region is usualy the highest, and peaks
+        can often be identified from this region.
+    </p>
+
+
+</body>
